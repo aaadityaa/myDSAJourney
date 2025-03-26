@@ -12,7 +12,7 @@ public class ContainsDuplicate {
         int[] nums2 = {7,6,4,3,1};
         int[] nums3 = {7,1,5,3,6,3};
         boolean result;
-        result = containsDuplicate(nums2);
+        result = containsDuplicateHashSet(nums2);
         System.out.println(result);
 
 
@@ -33,7 +33,7 @@ public class ContainsDuplicate {
         return false;
     }
 
-    public boolean containsDuplicateHashSet(int[] nums) {
+    public static boolean containsDuplicateHashSet(int[] nums) {
         int n = nums.length;
         Set<Integer> set = new HashSet<>();
         for (int i =0; i<n; i++){
