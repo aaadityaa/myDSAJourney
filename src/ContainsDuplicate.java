@@ -1,5 +1,7 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class ContainsDuplicate {
 
@@ -16,7 +18,7 @@ public class ContainsDuplicate {
 
     }
 
-    public static boolean containsDuplicate(int[] nums) {
+    public static boolean containsDuplicateHashMap(int[] nums) {
 
         int n = nums.length;
         Map<Integer, Integer> map = new HashMap<>();
@@ -26,6 +28,18 @@ public class ContainsDuplicate {
                 return true;
             }else{
                 map.put(nums[i], i);
+            }
+        }
+        return false;
+    }
+
+    public boolean containsDuplicateHashSet(int[] nums) {
+        int n = nums.length;
+        Set<Integer> set = new HashSet<>();
+        for (int i =0; i<n; i++){
+            if(set.add(nums[i])){
+            } else {
+                return true;
             }
         }
         return false;
